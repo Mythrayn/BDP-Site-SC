@@ -10761,10 +10761,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Tyler\\Documents\\Visual Studio 2017\\Projects\\BlackDragonPhotographyCore\\BlackDragonPhotographyCore\\BlackDragonPhotographyCore.csproj",
+      "projectUniqueName": "G:\\BDP Site SC\\BlackDragonPhotographyCore\\BlackDragonPhotographyCore.csproj",
       "projectName": "BlackDragonPhotographyCore",
-      "projectPath": "c:\\Users\\Tyler\\Documents\\Visual Studio 2017\\Projects\\BlackDragonPhotographyCore\\BlackDragonPhotographyCore\\BlackDragonPhotographyCore.csproj",
-      "outputPath": "c:\\Users\\Tyler\\Documents\\Visual Studio 2017\\Projects\\BlackDragonPhotographyCore\\BlackDragonPhotographyCore\\obj\\",
+      "projectPath": "G:\\BDP Site SC\\BlackDragonPhotographyCore\\BlackDragonPhotographyCore.csproj",
+      "outputPath": "G:\\BDP Site SC\\BlackDragonPhotographyCore\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

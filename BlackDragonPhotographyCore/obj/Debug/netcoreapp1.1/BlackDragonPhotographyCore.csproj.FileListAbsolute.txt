@@ -7,3 +7,12 @@ c:\users\tyler\documents\visual studio 2017\Projects\BlackDragonPhotographyCore\
 c:\users\tyler\documents\visual studio 2017\Projects\BlackDragonPhotographyCore\BlackDragonPhotographyCore\obj\Debug\netcoreapp1.1\BlackDragonPhotographyCore.AssemblyInfo.cs
 c:\users\tyler\documents\visual studio 2017\Projects\BlackDragonPhotographyCore\BlackDragonPhotographyCore\obj\Debug\netcoreapp1.1\BlackDragonPhotographyCore.dll
 c:\users\tyler\documents\visual studio 2017\Projects\BlackDragonPhotographyCore\BlackDragonPhotographyCore\obj\Debug\netcoreapp1.1\BlackDragonPhotographyCore.pdb
+G:\BDP Site SC\BlackDragonPhotographyCore\bin\Debug\netcoreapp1.1\BlackDragonPhotographyCore.deps.json
+G:\BDP Site SC\BlackDragonPhotographyCore\bin\Debug\netcoreapp1.1\BlackDragonPhotographyCore.runtimeconfig.json
+G:\BDP Site SC\BlackDragonPhotographyCore\bin\Debug\netcoreapp1.1\BlackDragonPhotographyCore.runtimeconfig.dev.json
+G:\BDP Site SC\BlackDragonPhotographyCore\bin\Debug\netcoreapp1.1\BlackDragonPhotographyCore.dll
+G:\BDP Site SC\BlackDragonPhotographyCore\bin\Debug\netcoreapp1.1\BlackDragonPhotographyCore.pdb
+G:\BDP Site SC\BlackDragonPhotographyCore\obj\Debug\netcoreapp1.1\BlackDragonPhotographyCore.csprojResolveAssemblyReference.cache
+G:\BDP Site SC\BlackDragonPhotographyCore\obj\Debug\netcoreapp1.1\BlackDragonPhotographyCore.AssemblyInfo.cs
+G:\BDP Site SC\BlackDragonPhotographyCore\obj\Debug\netcoreapp1.1\BlackDragonPhotographyCore.dll
+G:\BDP Site SC\BlackDragonPhotographyCore\obj\Debug\netcoreapp1.1\BlackDragonPhotographyCore.pdb
