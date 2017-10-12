@@ -9,6 +9,18 @@ namespace BlackDragonPhotographyCore.Models
     public class Album
     {
         [Key]
-        public int AlbumId { get; set; }
+        public int AlbumID { get; set; }
+
+        public string AlbumDescription { get; set; }
+
+        public int AlbumCoverImageID { get; set; }
+
+        public DateTime AlbumCreateDt { get; set; }
+
+        public int AlbumCreateUser { get; set; }
+
+        public DateTime AlbumEditDt { get; set; }
+
+        public int AlbumEditUser { get; set; }
     }
 }

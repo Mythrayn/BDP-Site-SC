@@ -33,7 +33,7 @@ namespace BlackDragonPhotographyCore.Controllers
             }
 
             var album = await _context.Album
-                .SingleOrDefaultAsync(m => m.AlbumId == id);
+                .SingleOrDefaultAsync(m => m.AlbumID == id);
             if (album == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace BlackDragonPhotographyCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AlbumId")] Album album)
+        public async Task<IActionResult> Create([Bind("AlbumID")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace BlackDragonPhotographyCore.Controllers
                 return NotFound();
             }
 
-            var album = await _context.Album.SingleOrDefaultAsync(m => m.AlbumId == id);
+            var album = await _context.Album.SingleOrDefaultAsync(m => m.AlbumID == id);
             if (album == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace BlackDragonPhotographyCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AlbumId")] Album album)
+        public async Task<IActionResult> Edit(int id, [Bind("AlbumID")] Album album)
         {
-            if (id != album.AlbumId)
+            if (id != album.AlbumID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace BlackDragonPhotographyCore.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AlbumExists(album.AlbumId))
+                    if (!AlbumExists(album.AlbumID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace BlackDragonPhotographyCore.Controllers
             }
 
             var album = await _context.Album
-                .SingleOrDefaultAsync(m => m.AlbumId == id);
+                .SingleOrDefaultAsync(m => m.AlbumID == id);
             if (album == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace BlackDragonPhotographyCore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var album = await _context.Album.SingleOrDefaultAsync(m => m.AlbumId == id);
+            var album = await _context.Album.SingleOrDefaultAsync(m => m.AlbumID == id);
             _context.Album.Remove(album);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -146,7 +146,7 @@ namespace BlackDragonPhotographyCore.Controllers
 
         private bool AlbumExists(int id)
         {
-            return _context.Album.Any(e => e.AlbumId == id);
+            return _context.Album.Any(e => e.AlbumID == id);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace BlackDragonPhotographyCore.Controllers
             }
 
             var image = await _context.Image
-                .SingleOrDefaultAsync(m => m.ImageId == id);
+                .SingleOrDefaultAsync(m => m.ImageID == id);
             if (image == null)
             {
                 return NotFound();
@@ -43,7 +43,7 @@ namespace BlackDragonPhotographyCore.Controllers
         }
 
         // GET: Images/Create
-        public IActionResult Create()
+        public IActionResult Upload()
         {
             return View();
         }
@@ -53,7 +53,7 @@ namespace BlackDragonPhotographyCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ImageId")] Image image)
+        public async Task<IActionResult> Upload([Bind("ImageID")] Image image)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace BlackDragonPhotographyCore.Controllers
                 return NotFound();
             }
 
-            var image = await _context.Image.SingleOrDefaultAsync(m => m.ImageId == id);
+            var image = await _context.Image.SingleOrDefaultAsync(m => m.ImageID == id);
             if (image == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace BlackDragonPhotographyCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ImageId")] Image image)
+        public async Task<IActionResult> Edit(int id, [Bind("ImageID")] Image image)
         {
-            if (id != image.ImageId)
+            if (id != image.ImageID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace BlackDragonPhotographyCore.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ImageExists(image.ImageId))
+                    if (!ImageExists(image.ImageID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace BlackDragonPhotographyCore.Controllers
             }
 
             var image = await _context.Image
-                .SingleOrDefaultAsync(m => m.ImageId == id);
+                .SingleOrDefaultAsync(m => m.ImageID == id);
             if (image == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace BlackDragonPhotographyCore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var image = await _context.Image.SingleOrDefaultAsync(m => m.ImageId == id);
+            var image = await _context.Image.SingleOrDefaultAsync(m => m.ImageID == id);
             _context.Image.Remove(image);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -146,7 +146,7 @@ namespace BlackDragonPhotographyCore.Controllers
 
         private bool ImageExists(int id)
         {
-            return _context.Image.Any(e => e.ImageId == id);
+            return _context.Image.Any(e => e.ImageID == id);
         }
     }
 }

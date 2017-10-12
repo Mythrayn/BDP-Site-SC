@@ -33,7 +33,7 @@ namespace BlackDragonPhotographyCore.Controllers
             }
 
             var gallery = await _context.Gallery
-                .SingleOrDefaultAsync(m => m.GalleryId == id);
+                .SingleOrDefaultAsync(m => m.GalleryID == id);
             if (gallery == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace BlackDragonPhotographyCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GalleryId")] Gallery gallery)
+        public async Task<IActionResult> Create([Bind("GalleryID")] Gallery gallery)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace BlackDragonPhotographyCore.Controllers
                 return NotFound();
             }
 
-            var gallery = await _context.Gallery.SingleOrDefaultAsync(m => m.GalleryId == id);
+            var gallery = await _context.Gallery.SingleOrDefaultAsync(m => m.GalleryID == id);
             if (gallery == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace BlackDragonPhotographyCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GalleryId")] Gallery gallery)
+        public async Task<IActionResult> Edit(int id, [Bind("GalleryID")] Gallery gallery)
         {
-            if (id != gallery.GalleryId)
+            if (id != gallery.GalleryID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace BlackDragonPhotographyCore.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!GalleryExists(gallery.GalleryId))
+                    if (!GalleryExists(gallery.GalleryID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace BlackDragonPhotographyCore.Controllers
             }
 
             var gallery = await _context.Gallery
-                .SingleOrDefaultAsync(m => m.GalleryId == id);
+                .SingleOrDefaultAsync(m => m.GalleryID == id);
             if (gallery == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace BlackDragonPhotographyCore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var gallery = await _context.Gallery.SingleOrDefaultAsync(m => m.GalleryId == id);
+            var gallery = await _context.Gallery.SingleOrDefaultAsync(m => m.GalleryID == id);
             _context.Gallery.Remove(gallery);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -146,7 +146,7 @@ namespace BlackDragonPhotographyCore.Controllers
 
         private bool GalleryExists(int id)
         {
-            return _context.Gallery.Any(e => e.GalleryId == id);
+            return _context.Gallery.Any(e => e.GalleryID == id);
         }
     }
 }

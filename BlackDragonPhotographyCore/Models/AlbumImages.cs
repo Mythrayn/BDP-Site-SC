@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace BlackDragonPhotographyCore.Models
 {
-    public class Gallery
+    public class AlbumImages
     {
-        [Key]
-        public int GalleryID { get; set; }
+        public int AlbumID { get; set; }
+
+        public int ImageID { get; set; }
     }
 }
